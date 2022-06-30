@@ -73,7 +73,7 @@ span.text-red {
 }
 .cart-icon {
   font-size: 25px;
-  color: gray;
+  color: black;
   cursor: pointer;
   position: relative;
   transition: transform 0.4s ease;

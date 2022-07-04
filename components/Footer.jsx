@@ -3,7 +3,6 @@ import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaRegCopyright } from "react-icons/fa";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
-import { ImWhatsapp } from "react-icons/im";
 
 const Footer = () => {
   return (
@@ -22,7 +21,6 @@ const Footer = () => {
         <AiFillInstagram />
         <AiOutlineTwitter />
         <GrLinkedinOption />
-        <ImWhatsapp />
       </p>
     </div>
   );

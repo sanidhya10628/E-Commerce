@@ -20,7 +20,9 @@ function MyApp({ Component, pageProps }) {
 
   if (loading) {
     return (
-      <Loader />
+      <StateContext>
+        <Loader />
+      </StateContext>
     )
   }
   return (

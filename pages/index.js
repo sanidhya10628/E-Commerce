@@ -1,9 +1,10 @@
 import React from 'react'
 import { client } from '../lib/client'
-import { Product, FooterBanner, HeroBanner } from '../components/index'
+import { Product, FooterBanner, HeroBanner, Features } from '../components/index'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-const Home = ({ products, bannerData }) => {
+const Home = ({ products, bannerData, footerBannerData }) => {
+
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
@@ -16,7 +17,8 @@ const Home = ({ products, bannerData }) => {
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
 
-      <FooterBanner footerBanner={bannerData && bannerData[0]} />
+      <FooterBanner footerBanner={footerBannerData && footerBannerData[0]} />
+      <Features />
     </>
   )
 }
@@ -28,9 +30,13 @@ export const getServerSideProps = async () => {
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery)
 
+  const footerBannerQuery = '*[_type == "footerbanner"]';
+  const footerBannerData = await client.fetch(footerBannerQuery);
+
+
   return {
     props: {
-      products, bannerData
+      products, bannerData, footerBannerData
     }
   }
 }

@@ -52,7 +52,7 @@ img {
   font-size: 29px;
   font-weight: 600;
   margin: 60px 0px;
-  color: #f02d34;
+  color: var(--main-color);
 }
 .marquee {
   position: relative;
@@ -85,7 +85,7 @@ span.text-red {
   margin-left: 6px;
 }
 .logo {
-  color: gray;
+  color: var(--main-color);
   font-size: 18px;
 }
 .cart-icon {
@@ -105,7 +105,7 @@ span.text-red {
   right: -8px;
   font-size: 12px;
   color: #eee;
-  background-color: #f02d34;
+  background-color: var(--main-color);
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -298,7 +298,7 @@ span.text-red {
   font-size: 16px;
   font-weight: 200;
 }
-.footer-banner-container {
+/* .footer-banner-container {
   padding: 100px 40px;
   background-color: #f02d34;
   border-radius: 15px;
@@ -334,8 +334,8 @@ span.text-red {
 }
 .footer-banner-image {
   position: absolute;
-  /* top: -35%;
-  left: 8%; */
+  top: -35%;
+  left: 8%;
   top: -25%;
   left: 25%;
 }
@@ -352,7 +352,7 @@ span.text-red {
 .banner-desc .right .company-desc {
   font-size: 14px;
   font-weight: 300;
-}
+} */
 .cart-wrapper {
   width: 100vw;
   background: rgba(0, 0, 0, 0.5);
@@ -406,7 +406,7 @@ span.text-red {
 }
 .cart-num-items {
   margin-left: 10px;
-  color: #f02d34;
+  color: var(--main-color);
 }
 .empty-cart {
   margin: 40px;
@@ -487,7 +487,7 @@ span.text-red {
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
+  background-color: var(--main-color);
   color: #fff;
   cursor: pointer;
   transform: scale(1, 1);
@@ -501,20 +501,19 @@ span.text-red {
   gap: 40px;
   margin: 40px;
   margin-top: 60px;
-  color: #324d67;
+  color: var(--dark-text);
 }
 
 .product-detail-image {
   border-radius: 15px;
   background-color: #ebebeb;
-
   width: 400px;
   height: 400px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .product-detail-image:hover {
-  background-color: #f02d34;
+  /* background-color: #f02d34; */
 }
 .small-images-container {
   display: flex;
@@ -530,7 +529,7 @@ span.text-red {
 }
 
 .selected-image {
-  background-color: #f02d34;
+  background-color: var(--light-bg);
 }
 .reviews {
   color: #f02d34;
@@ -547,14 +546,14 @@ span.text-red {
   margin-top: 10px;
 }
 .reviews p {
-  color: #324d67;
+  color: var(--dark-text);
   margin-top: 0px;
 }
 .product-detail-desc .price {
   font-weight: 700;
   font-size: 26px;
   margin-top: 30px;
-  color: #f02d34;
+  color: var(--main-color);
 }
 .price .old-price,
 .product-price .old-price,
@@ -574,12 +573,12 @@ span.text-red {
 }
 .buttons .add-to-cart {
   padding: 10px 20px;
-  border: 1px solid #f02d34;
+  border: 1px solid var(--main-color);
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
   background-color: white;
-  color: #f02d34;
+  color: var(--dark-text);
   cursor: pointer;
   width: 200px;
   transform: scale(1, 1);
@@ -590,9 +589,8 @@ span.text-red {
 }
 .buttons .buy-now {
   width: 200px;
-
   padding: 10px 20px;
-  background-color: #f02d34;
+  background-color: var(--main-color);
   color: white;
   border: none;
   margin-top: 40px;
@@ -644,7 +642,7 @@ span.text-red {
 }
 .max-qty {
   font-weight: 500;
-  color: #f02d34;
+  color: var(--dark-text);
 }
 .success-wrapper,
 .cancel-wrapper {
@@ -694,7 +692,7 @@ span.text-red {
 }
 .success .description .email {
   margin-left: 5px;
-  color: #f02d34;
+  color: var(--main-color);
 }
 .product-max-qty {
   margin-top: 10px;
@@ -839,5 +837,125 @@ span.text-red {
   .btn-container {
     width: 300px;
     margin: auto;
+  }
+}
+
+/* Deal of the week */
+.deal-of-the-week section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.deal-of-the-week-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.deal-description {
+  flex-basis: 60%;
+}
+.deal-title {
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+  color: var(--main-color);
+}
+.deal-timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.deal-timer ul {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+}
+.deal-timer ul li {
+  padding: 20px;
+  background-color: var(--light-bg);
+  border-radius: 50%;
+  text-align: center;
+  margin: 50px 20px;
+  font-size: 34px;
+}
+.deal-shop-now-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.deal-shop-now-btn a {
+  text-decoration: none;
+  color: #555;
+  padding: 12px 24px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+.deal-shop-now-btn a:hover {
+  background-color: var(--main-color-hover);
+  transform: scale(1.1);
+}
+/* Responsive deal of the week */
+@media screen and (max-width: 850px) {
+  .deal-of-the-week section {
+    flex-direction: column;
+  }
+  .deal-title {
+    padding: 20px;
+  }
+
+  .deal-timer ul li {
+    flex-basis: 25%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .deal-shop-now-btn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Features */
+
+.features {
+  margin: 20px auto;
+}
+
+.features section {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.features-icons {
+  font-size: 40px;
+  color: var(--main-color);
+}
+.feature-col-1 {
+  flex-basis: 30%;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: var(--light-bg);
+  cursor: default;
+}
+.feature-col-1 h4 {
+  margin: 15px auto;
+  font-size: 20px;
+}
+
+/* Responsive Features */
+@media screen and (max-width: 950px) {
+  .features section {
+    flex-direction: column;
+  }
+  .feature-col-1 {
+    margin: 10px auto;
   }
 }

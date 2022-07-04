@@ -7,6 +7,7 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 
+import { FaRupeeSign } from "react-icons/fa";
 import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 
@@ -85,7 +86,10 @@ const Cart = () => {
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>
+                      {" "}
+                      <FaRupeeSign /> {item.price}
+                    </h4>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -127,7 +131,10 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal: </h3>
-              <h3>${totalPrice}</h3>
+              <h3>
+                <FaRupeeSign />
+                {totalPrice}
+              </h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>

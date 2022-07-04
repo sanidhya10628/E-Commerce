@@ -45,9 +45,12 @@ img {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
 }
+
 .marquee-text {
   font-size: 29px;
   font-weight: 600;
@@ -86,7 +89,7 @@ span.text-red {
 }
 .logo {
   color: var(--main-color);
-  font-size: 18px;
+  font-size: 25px;
 }
 .cart-icon {
   font-size: 25px;
@@ -102,12 +105,13 @@ span.text-red {
 }
 .cart-item-qty {
   position: absolute;
-  right: -8px;
+  right: -5px;
+  top: -8px;
   font-size: 12px;
-  color: #eee;
+  color: var(--white-text);
   background-color: var(--main-color);
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
@@ -515,9 +519,9 @@ span.text-red {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.product-detail-image:hover {
-  /* background-color: #f02d34; */
-}
+/* .product-detail-image:hover {
+  background-color: #f02d34;
+} */
 .small-images-container {
   display: flex;
   gap: 10px;
@@ -844,6 +848,9 @@ span.text-red {
 }
 
 /* Deal of the week */
+.deal-of-the-week {
+  margin: 70px 0;
+}
 .deal-of-the-week section {
   display: flex;
   justify-content: space-around;
@@ -905,7 +912,7 @@ span.text-red {
 /* Responsive deal of the week */
 @media screen and (max-width: 850px) {
   .deal-of-the-week {
-    margin: 50px 0px;
+    margin: 70px 0px;
   }
   .deal-of-the-week section {
     flex-direction: column-reverse;
@@ -928,7 +935,7 @@ span.text-red {
 /* Features */
 
 .features {
-  margin: 50px auto;
+  margin: 70px auto;
 }
 .features-heading {
   text-align: center;

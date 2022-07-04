@@ -13,7 +13,6 @@ const Features = () => {
           <FaTruck className="features-icons" />
           <h4>Free Shipping</h4>
           <p>
-            {" "}
             For all the products that are available in our store would be
             shipped free of cost.
           </p>

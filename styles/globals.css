@@ -116,7 +116,7 @@ span.text-red {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
   margin-top: 20px;
   width: 100%;
 }
@@ -271,6 +271,9 @@ span.text-red {
 
 /* Responsive Hero Banner */
 @media screen and (max-width: 870px) {
+  .hero-banner {
+    margin-bottom: 70px;
+  }
   .hero-banner section {
     flex-direction: column-reverse;
   }
@@ -901,8 +904,11 @@ span.text-red {
 }
 /* Responsive deal of the week */
 @media screen and (max-width: 850px) {
+  .deal-of-the-week {
+    margin: 50px 0px;
+  }
   .deal-of-the-week section {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .deal-title {
     padding: 20px;
@@ -922,9 +928,21 @@ span.text-red {
 /* Features */
 
 .features {
-  margin: 20px auto;
+  margin: 50px auto;
 }
-
+.features-heading {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+.features-hr-style {
+  background: #ff4500;
+  height: 4px;
+  width: 15%;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+}
 .features section {
   max-width: 1080px;
   margin: auto;

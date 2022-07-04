@@ -6,6 +6,8 @@ import { GiAnticlockwiseRotation } from "react-icons/gi";
 const Features = () => {
   return (
     <div className="features">
+      <h1 className="features-heading">Features</h1>
+      <hr className="features-hr-style" />
       <section>
         <div className="feature-col-1">
           <FaTruck className="features-icons" />
@@ -28,8 +30,8 @@ const Features = () => {
           <GiAnticlockwiseRotation className="features-icons" />
           <h4>45 Days Return</h4>
           <p>
-            Free replacement will be provided within 45 days if the product is
-            delivered in defective/damaged.
+            Free replacement within 45 days if the product is delivered in
+            defective/damaged.
           </p>
         </div>
       </section>

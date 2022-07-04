@@ -3,9 +3,23 @@ body,
 * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Plus Jakarta Sans, sans-serif;
   box-sizing: border-box;
+}
+:root {
+  --main-color: #0078d4;
+  --text-color: #201f1e;
+  --light-color: #c8c6c4;
+  --light-bg: #e8f2fd;
+  --dark-bg: #111;
+  --white-text: #fff;
+  --dark-text: #575250;
+  --main-color-hover: #0065b3;
+  --error-color: #f00;
+  --small-font: 16px;
+  --site-font: 18px;
+  --site-font-sm: 16px;
+  --theme-font: "Sen", sans-serif;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -15,9 +29,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+img {
+  width: 100%;
+}
 
 .main-container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: auto;
   width: 100%;
 }
@@ -128,7 +145,7 @@ span.text-red {
   color: black;
 }
 
-.hero-banner-container {
+/* .hero-banner-container {
   padding: 100px 40px;
   background-color: #dcdcdc;
   border-radius: 15px;
@@ -143,8 +160,7 @@ span.text-red {
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
-  /* background-color: #f02d34; */
-  background-color: #3dc005;
+  background-color: #f02d34;
   color: white;
   border: none;
   margin-top: 40px;
@@ -191,9 +207,84 @@ span.text-red {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 16px;
-  /* color: black; */
+  color: black;
   align-self: flex-end;
+} */
+
+/* Hero Banner CSS */
+.hero-banner {
+  margin: 10px 0px;
 }
+
+.hero-banner section {
+  /* max-width: 1080px; */
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-banner-desc {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.hero-banner-large-text {
+  font-size: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.hero-banner-small-text {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.hero-banner-img-div {
+  flex: 70%;
+}
+.hero-banner-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero-banner-shop-btn {
+  padding-top: 25px;
+}
+.hero-banner-shop-btn button {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 3px;
+  color: var(--white-text);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 12px 24px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.hero-banner-shop-btn button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Hero Banner */
+@media screen and (max-width: 870px) {
+  .hero-banner section {
+    flex-direction: column-reverse;
+  }
+  .hero-banner-large-text {
+    font-size: 30px;
+  }
+  .hero-banner-small-text {
+    font-size: 18px;
+  }
+  .hero-banner-img-div {
+    max-height: 700px;
+  }
+}
+
 .products-heading {
   text-align: center;
   margin: 40px 0px;
@@ -283,11 +374,12 @@ span.text-red {
 
 .footer-container {
   color: #324d67;
+  /* color: var(--dark-bg); */
   text-align: center;
   margin-top: 20px;
   padding: 30px 10px;
-  font-weight: 700;
   display: flex;
+  font-weight: 700;
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -296,7 +388,7 @@ span.text-red {
 .footer-container .icons {
   font-size: 30px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 .cart-heading {
   display: flex;

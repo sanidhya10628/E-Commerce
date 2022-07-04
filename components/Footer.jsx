@@ -1,13 +1,28 @@
 import React from "react";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
+import { FaRegCopyright } from "react-icons/fa";
+import { BsFillSuitHeartFill } from "react-icons/bs";
+import { GrLinkedinOption } from "react-icons/gr";
+import { ImWhatsapp } from "react-icons/im";
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>2022 JSM Headphones All right reserved</p>
+      <p>
+        CopyRight <FaRegCopyright /> 2022 All rights reserved. | Made with
+        <BsFillSuitHeartFill color="red" /> by
+        <a
+          href="https://www.linkedin.com/in/sanidhya-mahajan-00271a193/"
+          target="_blank"
+        >
+          <strong> Sanidhya Mahajan</strong>
+        </a>
+      </p>
       <p className="icons">
         <AiFillInstagram />
         <AiOutlineTwitter />
+        <GrLinkedinOption />
+        <ImWhatsapp />
       </p>
     </div>
   );

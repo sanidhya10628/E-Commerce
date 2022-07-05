@@ -1,46 +1,88 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 const FooterBanner = ({ footerBanner: { product, image, desc } }) => {
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
+  // const [futureDate, setFutureDate] = useState(
+  //   new Date(new Date(Date.now() + 10 * 1000))
+  // );
+  let interval = useRef();
+
+  const startTimer = () => {
+    let countDownDate = new Date("04 Aug 2022").getTime();
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (distance < 0) {
+        clearInterval(interval.current);
+      } else {
+        // update timer
+        setTimerDays(days);
+        setTimerHours(hours);
+        setTimerMinutes(minutes);
+        setTimerSeconds(seconds);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      clearInterval(interval.current);
+    };
+  });
+
   // console.log(product, image, desc);
   return (
-    <div className="deal-of-the-week">
+    <div className="deal-of-the-month">
       <section>
-        <div className="deal-of-the-week-img">
+        <div className="deal-of-the-month-img">
           <img src={urlFor(image)} alt="" width="100%" />
         </div>
         <div className="deal-description">
           <div className="deal-title">
-            <h3>Deal Of The Week</h3>
+            <h3>Deal Of The Month</h3>
           </div>
           <div className="deal-timer">
             <ul>
               <li>
                 <span>
-                  <b>34</b>
+                  <b>{timerDays}</b>
                 </span>
                 <br />
                 Days
               </li>
               <li>
                 <span>
-                  <b>34</b>
+                  <b>{timerHours}</b>
                 </span>
                 <br />
                 Hour
               </li>
               <li>
                 <span>
-                  <b>34</b>
+                  <b>{timerMinutes}</b>
                 </span>
                 <br />
                 Mins
               </li>
               <li>
                 <span>
-                  <b>34</b>
+                  <b>{timerSeconds}</b>
                 </span>
                 <br />
                 Secs

@@ -847,16 +847,16 @@ span.text-red {
   }
 }
 
-/* Deal of the week */
-.deal-of-the-week {
+/* Deal of the month */
+.deal-of-the-month {
   margin: 70px 0;
 }
-.deal-of-the-week section {
+.deal-of-the-month section {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.deal-of-the-week-img {
+.deal-of-the-month-img {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -909,12 +909,12 @@ span.text-red {
   background-color: var(--main-color-hover);
   transform: scale(1.1);
 }
-/* Responsive deal of the week */
+/* Responsive deal of the month */
 @media screen and (max-width: 850px) {
-  .deal-of-the-week {
+  .deal-of-the-month {
     margin: 70px 0px;
   }
-  .deal-of-the-week section {
+  .deal-of-the-month section {
     flex-direction: column-reverse;
   }
   .deal-title {

@@ -14,7 +14,7 @@ const FooterBanner = ({ footerBanner: { product, image, desc } }) => {
   let interval = useRef();
 
   const startTimer = () => {
-    let countDownDate = new Date("1 Oct 2022").getTime();
+    let countDownDate = new Date("1 Dec 2022").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
